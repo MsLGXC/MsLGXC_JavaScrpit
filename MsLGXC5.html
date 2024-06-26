@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="src/assets/eln.jpg">
+        <title>流光星辰的网页</title>
+        <link rel="stylesheet" href="src/lib/bootstrap.css">
+        <link rel="stylesheet" href="src/lib/unicons.css">
+        <link rel="stylesheet" href="src/assets/menu.css">
+        <link rel="stylesheet" href="src/assets/MsLGXC.css">
+        <link rel="stylesheet" href="src/assets/404.css">
+        <script src="src/lib/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <header class="cd-header">
+            <div class="header-wrapper">
+                <div class="logo-wrap">
+                    <a href="https://github.com/MsLGXC" class="hover-target"><span>Ms</span>LGXC</a>
+                </div>
+                <div class="nav-but-wrap">
+                    <div class="menu-icon hover-target">
+                        <span class="menu-icon__line menu-icon__line-left"></span>
+                        <span class="menu-icon__line"></span>
+                        <span class="menu-icon__line menu-icon__line-right"></span>
+                    </div>					
+                </div>					
+            </div>				
+        </header>
+        <div class="nav">
+            <div class="nav__content">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="MsLGXC.html" class="hover-target">登陆页面</a></li>
+                    <li class="nav__list-item"><a href="MsLGXC2.html" class="hover-target">语言/框架</a></li>
+                    <li class="nav__list-item"><a href="MsLGXC3.html" class="hover-target">软件/平台</a></li>
+                    <li class="nav__list-item"><a href="MsLGXC4.html" class="hover-target">凑数来的</a></li>
+                    <li class="nav__list-item active-nav"><a href="MsLGXC5.html" class="hover-target">啥也没有</a></li>
+                </ul>
+            </div>
+        </div>
+        <svg class="overlay text" viewBox="0 0 900 400">
+          <symbol id="main">
+            <text text-anchor="middle" x="50%" y="50%" dy="0.25em" class="txt">404</text>
+                <text text-anchor="middle" x="50%" y="90%" dy="0.25em" class="txt2">Not Found</text>
+          </symbol>
+          <mask id="msk" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+            <rect width="100%" height="100%" class="wrap"></rect>
+            <use xlink:href="#main" class="mtxt"></use>
+          </mask>
+        </svg>
+        <section>
+          <h1 href="#">
+            <div class="fill">
+              <canvas id="canv" width = "460" height = "360" style="background: hsla(0, 0%, 0%, 1);"></canvas>
+            </div>
+            <svg viewBox="0 0 100% 100%" class="inv">
+              <rect width="100%" height="100%" mask="url(#msk)" class="rect" />
+              <use xlink:href="#main" class="clear"></use>
+            </svg>
+          </h1>
+        </section>
+        <script  src="src/404.js"></script>
+        <div class='cursor' id="cursor"></div>
+        <div class='cursor2' id="cursor2"></div>
+        <div class='cursor3' id="cursor3"></div>
+        <a href="https://github.com/MsLGXC" class="link-to-portfolio hover-target" target=”_blank”></a>
+        <script src="src/onclick.js"></script>
+    </body>
+    <script src="src/sakura.js"></script>
+    <script src="src/canva.js"></script>
+    <script src="src/404.js"></script>
+    <script src="src/MsLGXC.js"></script>
+</html>

@@ -1,0 +1,384 @@
+@charset "utf-8";
+/* damn 我知道有很多shit在这里 但是我懒得删掉 */
+/* 瞎改 */
+@font-face {
+  font-family: "霞鹜文楷等宽";
+  src: url(LXGWWenKaiMono-Regular.ttf);
+}
+@font-face {
+  font-family: "fira code";
+  src: url(FiraCode-Regular_0.ttf);
+}
+body {
+  font-family: '霞鹜文楷等宽', 'fira code', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #6e45e2 0%, #88d3ce 100%);
+  color: #333333; 
+  letter-spacing: 0.5px;
+  font-weight: 300;
+	font-size: 16px;
+	line-height: 1.7;
+  background-color: #1f2029;
+  background-image: url('pat-back.svg');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 4%;
+	overflow-x: hidden;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+  width: 100%;
+}
+/* 分割魔改 */
+.MsLGXC a {color: #F5F21F;}
+.MsLGXC .trigger-headline {color: palevioletred;}
+.MsLGXC .github-icon {fill: #F5F21F;}
+.MsLGXC .segmenter__shadow {box-shadow: 2px 20px 35px rgba(25, 23, 20, 0.75);}
+/* 主页非魔改新增 */
+.MsLGXC-bottom-nav {
+  z-index: 1;
+  position: absolute;
+  bottom: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.MsLGXC-btn {
+  margin-top: 2em;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.4);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+.MsLGXC-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: transform 0.5s ease-in-out;
+}
+.MsLGXC-btn:hover::before {transform: rotate(0deg);}
+.MsLGXC-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 17, 203, 0.6);
+}
+.error-message {
+  margin-top: 100px;
+  position: fixed; 
+  bottom: 16px; 
+  left: 84%;
+  transform: translateX(-50%);
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideUp 0.5s ease-out forwards;
+}
+.empty-message {
+  margin-top: 100px;
+  position: fixed; 
+  bottom: 32px; 
+  left: 84%;
+  transform: translateX(-50%);
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideUp 0.5s ease-out forwards;
+}
+.error-message p,.empty-message p {
+  margin: 0;
+  font-size: 16px;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+input::placeholder {
+  color: palegoldenrod; 
+  opacity: 0.4; 
+}
+@media (max-width: 768px) {
+  .title-box {font-size: 28px;}
+  .input-box input {padding: 12px;}
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.title-box {
+  margin-bottom: 40px;
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.input-box {
+  position: relative;
+  width: 100%;
+}
+.input-box input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.input-box input:focus {box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset;}
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+.text-gradient {
+	color: #333;
+	background: linear-gradient(45deg, #6e45e2, #88d3ce);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+	text-shadow: 0 0 10px rgba(110, 69, 226, 0.7),
+				       0 0 20px rgba(136, 211, 206, 0.7);
+}
+/* 手风琴完全魔改 */
+.content-topic{
+  margin:0px auto;
+	padding:20px 0px;
+  font-size: 36px;
+}
+.content-what{
+	width: 100%;
+	height: 100%;
+  margin-top: 6%;
+	text-align:center;
+}
+.content-what .what-list{font-size:0;height:448px;}
+.content-what .what-item{
+	display:inline-block;
+	position:relative;
+	width:88px;
+	margin-left:-2px;
+	line-height:1.6;
+	font-size:16px;
+	text-align:center;
+	vertical-align:middle;
+	background-color:#fff;
+	color:#323232;
+	border-radius:4px;
+	box-shadow:0 0 10px 0 rgba(0,0,0,.15);
+	transition:width .5s ease,height .5s ease,box-shadow .3s ease;cursor:pointer
+}
+.content-backers .backers-detail,.content-invers .invers-item{box-shadow:0 0 4px 0 rgba(179,179,179,.17),inset 0 -3px 0 0 rgba(103,77,199,.05)}
+.content-what .what-item .what-item-bg{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+	border-radius: 4px;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+	transition:opacity .4s ease .1s
+}
+.content-what .what-item span{
+	visibility:visible;
+	transition:opacity .15s ease .4s;
+	position:absolute;
+	width:14px;top:50%;left:22px;transform:translateY(-50%)
+}
+.content-what .what-item-1 .what-item-bg{background:url("Golang.png") center/cover no-repeat;background-size:100%;}
+.content-what .what-item-2 .what-item-bg{background:url("Python.png") center/cover no-repeat;background-size:100%;}
+.content-what .what-item-3 .what-item-bg{background:url("Java.png") center/cover no-repeat;background-size:100%;}
+.content-what .what-item-4 .what-item-bg{background:url("All.png") center/cover no-repeat;background-size:100%;}
+.content-what .what-item-5 .what-item-bg{background:url("HTML.png") center/cover no-repeat;background-size:100%;}
+.content-what .what-item-6 .what-item-bg{background:url("CSS完全に理解した.png") center/cover no-repeat;background-size:100%;}
+.content-what .what-item-7 .what-item-bg{background:url("Node.js.png") center/cover no-repeat;background-size:100%;}
+.content-what .what-item-8 .what-item-bg{background:url("Vue.png") center/cover no-repeat;background-size:100%;}
+.content-what .what-item-active{width:960px;height:540px!important;background-size:cover;margin-right:2px;z-index:9!important;transition:width .4s ease,height .4s ease;}
+.content-what .what-item-active span{visibility:hidden;opacity:0}
+.content-what .what-item-active .what-item-bg{transition:opacity .5s ease 0s;opacity:1;visibility:visible}
+.content-what .what-item:nth-child(1){height:388px;padding:0 22px;z-index:1}
+.content-what .what-item:nth-child(2){height:408px;padding:0 22px;z-index:3}
+.content-what .what-item:nth-child(3){height:428px;padding:0 22px;z-index:5}
+.content-what .what-item:nth-child(4){height:448px;padding:0 22px;z-index:7}
+.content-what .what-item:nth-child(5){height:448px;padding:0 22px;z-index:7}
+.content-what .what-item:nth-child(6){height:428px;padding:0 22px;z-index:5}
+.content-what .what-item:nth-child(7){height:408px;padding:0 22px;z-index:3}
+.content-what .what-item:nth-child(8){height:388px;padding:0 22px;z-index:2}
+.content-main{
+  margin-top:8em;
+	font-size: 22px;
+}
+/* 轮播非魔改新增 */
+
+.content-what .what-item {filter: brightness(1.1);}
+.content-what .what-item-active span {animation: text-glow 1.5s ease-in-out infinite;}
+.content-what::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .content-what .what-item {transform: scale(0.8);}
+}
+.what-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.content-what .what-item:hover {
+	background-image:linear-gradient(160deg,rgba(101,70,194,.2) 0,rgba(119,115,228,.2) 50%,rgba(93,136,238,.2) 100%);
+  transform: translateY(-5px);
+}
+.what-indicator span {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.what-indicator span.active {background-color: #333;}
+.content-what {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 40px;
+  margin-bottom: 3em; 
+}
+.content-what .what-item-active {
+  background: #f5f5f5;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.content-what .what-item {
+  font-size: 16px;
+  color: #6e45e2;
+}
+.content-what .what-item span {text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);}
+@media (max-width: 768px) {
+  body, .content-what {background-attachment: scroll; }
+  .content-what {padding: 20px;}
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.content-what .what-item {animation: fadeIn 0.8s ease forwards;}
+/* 文本 */
+.text-gradient {
+  background: linear-gradient(135deg, #ff6ec7, #7b38a3);
+  background-size: 200% 200%;
+  background-position: 0 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  color: transparent; 
+  text-shadow: 
+    0 0 10px rgba(255, 110, 199, 0.8),
+    0 0 20px rgba(123, 56, 163, 0.7),
+    0 0 30px rgba(255, 255, 255, 0.5); 
+  animation: gradientScroll 5s infinite alternate;
+}
+@keyframes gradientScroll {
+  to { background-position: 100% 50%;}
+}
+/* 菜单魔改 */
+.nav:after {
+	background-color: rgba(9,9,12,1);
+  background-image: url('pat.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+	-webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
+}
+.link-to-portfolio {
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  z-index: 200;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  border-radius: 3px;
+  background-position: center center;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-image: url('github.svg');
+  box-shadow: 0 0 0 2px rgba(255,255,255,.1);
+  transition: opacity .2s, border-radius .2s, box-shadow .2s;
+  transition-timing-function: ease-out;
+}
+.img-wrap {
+  margin-left: 22%;
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+   border-radius: 4px;
+   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.02);
+   display: block;
+   transform: scale(1.2);
+   -webkit-transition: all 300ms linear;
+   transition: all 300ms linear; 
+}
+.hero-center-section.show .img-wrap{
+   transform: scale(1.4);
+}
